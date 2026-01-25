@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="nl" class="scroll-pt-24">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeKopenTV - Premium IPTV voor iedereen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Figtree', sans-serif;
+        color: #000;
+        overflow-x: hidden;
+        /* Replicating the vibe of the provided background image with a CSS mesh gradient */
+        background-color: #0002ff;
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(305,100%,70%,1) 0, transparent 50%), 
+          radial-gradient(at 50% 0%, hsla(285,100%,60%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(190,100%,50%,1) 0, transparent 50%), 
+          radial-gradient(at 0% 50%, hsla(300,100%,50%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 50%, hsla(270,100%,50%,1) 0, transparent 50%), 
+          radial-gradient(at 0% 100%, hsla(260,100%,40%,1) 0, transparent 50%), 
+          radial-gradient(at 50% 100%, hsla(290,100%,50%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 100%, hsla(305,100%,70%,1) 0, transparent 50%);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .glass-card-dark {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .text-italics {
+        font-style: italic;
+        font-weight: 300;
+      }
+      .marquee-container {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: 2rem;
+      }
+      .marquee-content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        min-width: 100%;
+        animation: scroll 40s linear infinite;
+      }
+      @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(calc(-100% - 2rem)); }
+      }
+      .grid-line {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: rgba(255,255,255,0.1);
+        z-index: -1;
+      }
+      .grid-line-left { left: 5%; }
+      .grid-line-right { right: 5%; }
+      
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      @media (max-width: 1024px) {
+        .grid-line { display: none; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
