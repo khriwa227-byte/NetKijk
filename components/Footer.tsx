@@ -8,11 +8,11 @@ export const Footer: React.FC = () => {
     <footer className="bg-black text-white py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-end">
-          <div className="space-y-12">
-            <h2 className="text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9]">
+          <div className="space-y-12 text-center lg:text-left">
+            <h2 className="text-4xl lg:text-8xl font-black tracking-tighter leading-[0.9]">
               Ontdek of PrimeKopenTV perfect voor jou is <span className="text-italics">(dat is het zeker)</span>
             </h2>
-            <p className="text-xl text-white/60 max-w-md">
+            <p className="text-xl text-white/60 max-w-md mx-auto lg:mx-0">
               Plan een onmiddellijk WhatsApp gesprek over PrimeKopenTV en ontdek alle mogelijkheden.
             </p>
             <div className="space-y-4">
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
             <span className="text-xl font-extrabold tracking-tighter">PrimeKopenTV</span>
           </div>
           
-          <div className="flex items-center gap-8 text-sm font-bold opacity-60">
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-8 text-sm font-bold opacity-60">
             <a href="#" className="hover:opacity-100 transition-opacity">Algemene voorwaarden</a>
             <a href="#" className="hover:opacity-100 transition-opacity">Privacybeleid</a>
             <a href="mailto:info@primekopentv.nl" className="hover:opacity-100 transition-opacity">info@primekopentv.nl</a>

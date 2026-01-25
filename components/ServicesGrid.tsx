@@ -34,11 +34,11 @@ export const ServicesGrid: React.FC = () => {
     <section className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
-          <div className="space-y-12">
-            <h2 className="text-5xl font-black tracking-tighter text-white">
+          <div className="space-y-12 text-center lg:text-left">
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white">
               Kanalen, films, series & <span className="text-italics">meer</span>
             </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               {SERVICES.map((service, i) => (
                 <div 
                   key={i} 
@@ -66,9 +66,9 @@ export const ServicesGrid: React.FC = () => {
 
         {/* Channel Marquee */}
         <div className="mb-20 space-y-6">
-           <div className="px-2">
+           <div className="px-2 text-center lg:text-left">
               <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Live TV</div>
-              <h3 className="text-3xl font-black tracking-tighter text-white">Al je favoriete zenders</h3>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Al je favoriete zenders</h3>
            </div>
            <div className="marquee-container -mx-6 overflow-hidden">
              <div className="marquee-content py-4" style={{ animationDuration: '40s', animationDirection: 'reverse' }}>
@@ -86,12 +86,12 @@ export const ServicesGrid: React.FC = () => {
 
         {/* Movie Marquee Section */}
         <div className="space-y-8">
-          <div className="flex justify-between items-end px-2">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Nu Trending</div>
-              <h3 className="text-3xl font-black tracking-tighter text-white">Top 20 Films in Nederland</h3>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top Films in Nederland</h3>
             </div>
-            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest">
+            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
               Direct beschikbaar in 4K
             </div>
           </div>

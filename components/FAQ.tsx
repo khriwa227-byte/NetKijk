@@ -27,8 +27,8 @@ export const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-32 px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
-        <div>
-          <h2 className="text-6xl font-black tracking-tighter sticky top-40 text-white leading-tight">
+        <div className="text-center lg:text-left">
+          <h2 className="text-5xl lg:text-6xl font-black tracking-tighter lg:sticky top-40 text-white leading-tight">
             Veelgestelde <br/><span className="text-italics underline decoration-pink-500 decoration-4 underline-offset-8">vragen</span>
           </h2>
         </div>
