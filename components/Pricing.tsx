@@ -30,9 +30,9 @@ export const Pricing: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {PRICING_PLANS.map((plan, idx) => (
-            <div key={idx} className={`glass-card rounded-[48px] overflow-hidden shadow-2xl relative flex flex-col group hover:scale-[1.02] transition-all duration-500 border-none ${idx === 1 ? 'ring-4 ring-pink-500/50' : ''}`}>
+            <div key={idx} className={`glass-card rounded-[48px] overflow-hidden shadow-2xl relative flex flex-col group hover:scale-[1.02] transition-all duration-500 border-none ${idx === 1 ? 'ring-4 ring-purple-500/50' : ''}`}>
               {idx === 1 && (
-                <div className="absolute top-6 right-8 bg-pink-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-2 shadow-lg shadow-pink-500/30">
+                <div className="absolute top-6 right-8 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-2 shadow-lg shadow-purple-500/30">
                   <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                   Meest Gekozen
                 </div>
@@ -52,11 +52,10 @@ export const Pricing: React.FC = () => {
                 
                 <div className="mb-10">
                   <div className="flex items-baseline gap-1">
-                    <span className={`text-6xl font-black tracking-tighter leading-none ${idx === 1 ? 'text-white' : 'text-black'}`}>{plan.monthlyPrice}</span>
-                    <span className={`text-lg font-bold ${idx === 1 ? 'text-white/40' : 'text-black/40'}`}>/ mnd</span>
+                    <span className={`text-6xl font-black tracking-tighter leading-none ${idx === 1 ? 'text-white' : 'text-black'}`}>{plan.price}</span>
                   </div>
-                  <div className={`text-sm mt-1 font-bold ${idx === 1 ? 'text-white/60' : 'text-black/50'}`}>
-                    Totaal {plan.price}
+                  <div className={`text-lg mt-2 font-bold ${idx === 1 ? 'text-white/60' : 'text-black/50'}`}>
+                    {plan.monthlyPrice} / mnd
                   </div>
                 </div>
 
@@ -64,7 +63,7 @@ export const Pricing: React.FC = () => {
                   <div className={`text-xs font-black uppercase tracking-widest mb-6 ${idx === 1 ? 'text-white/40' : 'text-black/40'}`}>Wat is inbegrepen</div>
                   {plan.features.map((feature, i) => (
                     <div key={i} className={`flex items-center gap-3 text-base font-bold ${idx === 1 ? 'text-white' : 'text-black'}`}>
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${idx === 1 ? 'bg-pink-500' : 'bg-black'}`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${idx === 1 ? 'bg-purple-500' : 'bg-black'}`}>
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                       </div>
                       {feature}
@@ -72,7 +71,7 @@ export const Pricing: React.FC = () => {
                   ))}
                 </div>
 
-                <button className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl ${idx === 1 ? 'bg-pink-500 text-white hover:bg-pink-600' : 'bg-black text-white hover:bg-gray-900'} active:scale-95`}>
+                <button className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl ${idx === 1 ? 'bg-purple-500 text-white hover:bg-purple-600' : 'bg-black text-white hover:bg-gray-900'} active:scale-95`}>
                   Abonneer nu
                 </button>
               </div>
