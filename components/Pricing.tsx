@@ -76,7 +76,7 @@ export const Pricing: React.FC = () => {
                   </div>
                 )}
                 {plan.savings && (
-                  <div className="absolute -left-1 top-8 bg-black text-white px-4 py-1.5 rounded-r-full text-xs font-black uppercase tracking-widest shadow-xl">
+                  <div className="absolute -right-1 top-8 bg-white text-black px-4 py-1.5 rounded-l-full text-xs font-black uppercase tracking-widest shadow-xl">
                     {plan.savings}
                   </div>
                 )}
