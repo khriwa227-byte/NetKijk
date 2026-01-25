@@ -17,16 +17,15 @@ const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, po
   </div>
 );
 
-const ChannelLogo: React.FC<{ name: string; color: string }> = ({ name, color }) => (
+const ChannelLogo: React.FC<{ name: string; logo: string }> = ({ name, logo }) => (
   <div
-    className="flex-shrink-0 px-6 py-4 glass-card rounded-2xl flex items-center justify-center h-20 min-w-[140px] opacity-70 hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl group overflow-hidden border border-white/10 hover:border-white/30"
+    className="flex-shrink-0 px-6 py-4 glass-card rounded-2xl flex items-center justify-center h-20 min-w-[160px] opacity-80 hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl group overflow-hidden border border-white/10 hover:border-white/30 bg-white/5 hover:bg-white/10"
   >
-    <span
-      className="text-lg font-black tracking-tight whitespace-nowrap transition-all duration-300 group-hover:scale-110"
-      style={{ color: color }}
-    >
-      {name}
-    </span>
+    <img
+      src={logo}
+      alt={name}
+      className="max-h-12 max-w-[120px] object-contain transition-all duration-300 group-hover:scale-110 brightness-0 invert group-hover:brightness-100 group-hover:invert-0"
+    />
   </div>
 );
 
@@ -73,13 +72,13 @@ export const ServicesGrid: React.FC = () => {
            </div>
            <div className="marquee-container -mx-6 overflow-hidden">
              <div className="marquee-content py-4" style={{ animationDuration: '40s', animationDirection: 'reverse' }}>
-               {CHANNEL_LOGOS.map((logo, i) => (
-                 <ChannelLogo key={i} name={logo.name} color={logo.color} />
+               {CHANNEL_LOGOS.map((channel, i) => (
+                 <ChannelLogo key={i} name={channel.name} logo={channel.logo} />
                ))}
              </div>
              <div className="marquee-content py-4" style={{ animationDuration: '40s', animationDirection: 'reverse' }}>
-               {CHANNEL_LOGOS.map((logo, i) => (
-                 <ChannelLogo key={`dup-${i}`} name={logo.name} color={logo.color} />
+               {CHANNEL_LOGOS.map((channel, i) => (
+                 <ChannelLogo key={`dup-${i}`} name={channel.name} logo={channel.logo} />
                ))}
              </div>
            </div>

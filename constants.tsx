@@ -100,41 +100,29 @@ export const SERVICES = [
 ];
 
 export const CHANNEL_LOGOS = [
-  { name: "NPO 1", color: "#FF6600" },
-  { name: "RTL 4", color: "#00A1E0" },
-  { name: "ESPN", color: "#D50032" },
-  { name: "Viaplay", color: "#E5007D" },
-  { name: "Ziggo Sport", color: "#FF6B00" },
-  { name: "SBS 6", color: "#FFD700" },
-  { name: "Eurosport", color: "#003DA5" },
-  { name: "Discovery", color: "#00A3E0" },
-  { name: "BBC One", color: "#BB1919" },
-  { name: "Netflix", color: "#E50914" },
-  { name: "HBO Max", color: "#7B2481" },
-  { name: "Disney+", color: "#0057A8" },
-  { name: "F1 TV", color: "#E10600" },
-  { name: "Sky Sports", color: "#E30613" }
+  { name: "ESPN", logo: "/assets/channels/espn.png" },
+  { name: "Viaplay", logo: "/assets/channels/viaplay.png" },
+  { name: "Ziggo Sport", logo: "/assets/channels/ziggo-sport.png" },
+  { name: "Eurosport", logo: "/assets/channels/eurosport.png" },
+  { name: "Sky Sports", logo: "/assets/channels/sky-sports.png" },
+  { name: "DAZN", logo: "/assets/channels/dazn.png" },
+  { name: "F1", logo: "/assets/channels/f1.png" }
 ];
 
 export const TOP_FILMS = [
-  { title: "Gladiator II", posterUrl: "https://image.tmdb.org/t/p/w500/uS9mY7o97Sdn69I99Eu97QnBpST.jpg" },
-  { title: "Wicked", posterUrl: "https://image.tmdb.org/t/p/w500/xDGbeZ0qzZ7bbzLq2Bdf6zdxtS8.jpg" },
-  { title: "Moana 2", posterUrl: "https://image.tmdb.org/t/p/w500/m0Sbw96YPf6YpS7vL9YvS9YvS9Y.jpg" },
-  { title: "Red One", posterUrl: "https://image.tmdb.org/t/p/w500/cdqLn6uQp0Z6fSNo9p6m9D69S3h.jpg" },
-  { title: "Dune: Part Two", posterUrl: "https://image.tmdb.org/t/p/w500/czembS0RhiERakv79jEBgh69Sdn.jpg" },
-  { title: "Deadpool & Wolverine", posterUrl: "https://image.tmdb.org/t/p/w500/8cdWjvZQUmOZpAF4W95buAf7S5z.jpg" },
-  { title: "The Substance", posterUrl: "https://image.tmdb.org/t/p/w500/lqoMzCcS6U7pB44q3m9Eq9t7iR5.jpg" },
-  { title: "Inside Out 2", posterUrl: "https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZfwZpL9OV1cn.jpg" },
-  { title: "Joker: Folie à Deux", posterUrl: "https://image.tmdb.org/t/p/w500/jL6M7G6yq4W96e2y3Z1M9o7k9o7.jpg" },
-  { title: "Beetlejuice 2", posterUrl: "https://image.tmdb.org/t/p/w500/kKgQbiSnkTu9p7AnuYvYmU6S6S9.jpg" },
-  { title: "Alien: Romulus", posterUrl: "https://image.tmdb.org/t/p/w500/b33S7vzRSTCores9pZpST6pP9pI.jpg" },
-  { title: "Twisters", posterUrl: "https://image.tmdb.org/t/p/w500/pjnD0S79Csi0mgsQkg9oBhXmUCj.jpg" },
-  { title: "Longlegs", posterUrl: "https://image.tmdb.org/t/p/w500/5aj8vVGFwA3STpT7C2C2FWBL2v8.jpg" },
-  { title: "Despicable Me 4", posterUrl: "https://image.tmdb.org/t/p/w500/wWba3TaoCIBnjZjn9UUNUpaVvL5.jpg" },
-  { title: "Anora", posterUrl: "https://image.tmdb.org/t/p/w500/798VfLInyYV3S3pP8uVz3W9S3V8.jpg" },
-  { title: "Conclave", posterUrl: "https://image.tmdb.org/t/p/w500/m996f9S3P8uVz3W9S3V8uVz3W9S.jpg" },
-  { title: "Heretic", posterUrl: "https://image.tmdb.org/t/p/w500/1EwX9S3P8uVz3W9S3V8uVz3W9S8.jpg" },
-  { title: "Paddington in Peru", posterUrl: "https://image.tmdb.org/t/p/w500/2EewuTrIB4X1ZpsCO3SBpS2x9n6.jpg" },
-  { title: "Smile 2", posterUrl: "https://image.tmdb.org/t/p/w500/a89VfLInyYV3S3pP8uVz3W9S3V8.jpg" },
-  { title: "Nosferatu", posterUrl: "https://image.tmdb.org/t/p/w500/3U9VfLInyYV3S3pP8uVz3W9S3V8.jpg" }
+  { title: "Gladiator II", posterUrl: "/assets/posters/gladiator-2.jpg" },
+  { title: "Wicked", posterUrl: "/assets/posters/wicked.jpg" },
+  { title: "Moana 2", posterUrl: "/assets/posters/moana-2.jpg" },
+  { title: "Red One", posterUrl: "/assets/posters/red-one.jpg" },
+  { title: "Dune: Part Two", posterUrl: "/assets/posters/dune-2.jpg" },
+  { title: "Deadpool & Wolverine", posterUrl: "/assets/posters/deadpool-wolverine.jpg" },
+  { title: "The Substance", posterUrl: "/assets/posters/the-substance.jpg" },
+  { title: "Inside Out 2", posterUrl: "/assets/posters/inside-out-2.jpg" },
+  { title: "Joker: Folie à Deux", posterUrl: "/assets/posters/joker-folie-a-deux.jpg" },
+  { title: "Beetlejuice Beetlejuice", posterUrl: "/assets/posters/beetlejuice-2.jpg" },
+  { title: "Alien: Romulus", posterUrl: "/assets/posters/alien-romulus.jpg" },
+  { title: "Despicable Me 4", posterUrl: "/assets/posters/despicable-me-4.jpg" },
+  { title: "Conclave", posterUrl: "/assets/posters/conclave.jpg" },
+  { title: "Heretic", posterUrl: "/assets/posters/heretic.jpg" },
+  { title: "F1", posterUrl: "/assets/posters/f1.jpg" }
 ];
