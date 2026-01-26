@@ -151,3 +151,13 @@ export const TOP_FILMS = [
   { title: "Heretic", posterUrl: "/assets/posters/heretic.jpg" },
   { title: "F1", posterUrl: "/assets/posters/f1.jpg" }
 ];
+
+export const TOP_TVSHOWS_NL = [
+  { title: "Mocro Maffia", posterUrl: "/assets/tvshows/mocro-maffia.jpg" },
+  { title: "Gooische Vrouwen", posterUrl: "/assets/tvshows/gooische-vrouwen.jpg" },
+  { title: "LOL: Last One Laughing", posterUrl: "/assets/tvshows/lol-last-one-laughing.jpg" },
+  { title: "Vandaag Inside", posterUrl: "/assets/tvshows/vandaag-inside.jpg" },
+  { title: "Winter Vol Liefde", posterUrl: "/assets/tvshows/winter-vol-liefde.jpg" },
+  { title: "Pandora", posterUrl: "/assets/tvshows/pandora.jpg" },
+  { title: "Sprekend Nederland", posterUrl: "/assets/tvshows/sprekend-nederland.jpg" }
+];

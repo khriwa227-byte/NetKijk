@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SERVICES, TOP_FILMS, CHANNEL_LOGOS } from '../constants';
+import { SERVICES, TOP_FILMS, CHANNEL_LOGOS, TOP_TVSHOWS_NL } from '../constants';
 
 const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, posterUrl }) => (
   <div className="flex-shrink-0 group cursor-pointer">
@@ -85,7 +85,7 @@ export const ServicesGrid: React.FC = () => {
         </div>
 
         {/* Movie Marquee Section */}
-        <div className="space-y-8">
+        <div className="space-y-8 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Nu Trending</div>
@@ -95,7 +95,7 @@ export const ServicesGrid: React.FC = () => {
               Direct beschikbaar in 4K
             </div>
           </div>
-          
+
           <div className="marquee-container -mx-6 overflow-hidden">
             <div className="marquee-content py-4" style={{ animationDuration: '60s' }}>
               {TOP_FILMS.map((film, i) => (
@@ -105,6 +105,32 @@ export const ServicesGrid: React.FC = () => {
             <div className="marquee-content py-4" style={{ animationDuration: '60s' }}>
               {TOP_FILMS.map((film, i) => (
                 <MoviePoster key={`dup-${i}`} title={film.title} posterUrl={film.posterUrl || `https://picsum.photos/seed/movie-${i}/400/600`} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Dutch TV Shows Marquee Section */}
+        <div className="space-y-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Nederlandse Series</div>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top TV Shows in Nederland</h3>
+            </div>
+            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
+              Exclusieve content
+            </div>
+          </div>
+
+          <div className="marquee-container -mx-6 overflow-hidden">
+            <div className="marquee-content py-4" style={{ animationDuration: '50s', animationDirection: 'reverse' }}>
+              {TOP_TVSHOWS_NL.map((show, i) => (
+                <MoviePoster key={i} title={show.title} posterUrl={show.posterUrl} />
+              ))}
+            </div>
+            <div className="marquee-content py-4" style={{ animationDuration: '50s', animationDirection: 'reverse' }}>
+              {TOP_TVSHOWS_NL.map((show, i) => (
+                <MoviePoster key={`dup-${i}`} title={show.title} posterUrl={show.posterUrl} />
               ))}
             </div>
           </div>
