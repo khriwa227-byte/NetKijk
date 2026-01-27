@@ -32,6 +32,14 @@ export const Pricing: React.FC = () => {
     return devicePricing || plan.devicePricing[0];
   };
 
+  const getWhatsAppUrl = (plan: typeof PRICING_PLANS[0]) => {
+    const pricing = getDevicePrice(plan);
+    const duration = plan.description.replace(' TOEGANG', '').toLowerCase();
+    const deviceText = selectedDevices === 1 ? '1 apparaat' : `${selectedDevices} apparaten`;
+    const message = `Hallo, ik wil graag het ${plan.name}-pakket van PrimeKopenTV aanschaffen voor ${duration} voor ${deviceText} (${pricing.price}).`;
+    return `https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+  };
+
   return (
     <section id="pricing" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
@@ -113,9 +121,14 @@ export const Pricing: React.FC = () => {
                     ))}
                   </div>
 
-                  <button className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl ${idx === 1 ? 'bg-purple-500 text-white hover:bg-purple-600' : 'bg-black text-white hover:bg-gray-900'} active:scale-95`}>
+                  <a
+                    href={getWhatsAppUrl(plan)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl block text-center ${idx === 1 ? 'bg-purple-500 text-white hover:bg-purple-600' : 'bg-black text-white hover:bg-gray-900'} active:scale-95`}
+                  >
                     Abonneer nu
-                  </button>
+                  </a>
                 </div>
               </div>
             );

@@ -71,16 +71,16 @@ export const PaymentMethods: React.FC = () => {
         <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white mb-12">
           Betaal zoals jij wilt
         </h2>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
           {PAYMENT_METHODS.map((method) => (
             <div
               key={method.name}
-              className="glass-card rounded-[28px] px-6 py-6 flex flex-col items-center gap-4 min-w-[130px] hover:bg-white transition-all duration-500 group cursor-default"
+              className="glass-card rounded-[28px] py-6 flex flex-col items-center gap-4 hover:bg-white transition-all duration-500 group cursor-default aspect-square max-h-[160px]"
             >
-              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-pink-500/20">
+              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-pink-500/20 flex-shrink-0">
                 {method.icon}
               </div>
-              <span className="text-sm font-bold tracking-tight">{method.name}</span>
+              <span className="text-xs font-bold tracking-tight text-center">{method.name}</span>
             </div>
           ))}
         </div>
