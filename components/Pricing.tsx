@@ -24,6 +24,7 @@ const DeviceIcon = () => (
 );
 
 export const Pricing: React.FC = () => {
+  // v2: WhatsApp ordering links on package buttons
   const [selectedDevices, setSelectedDevices] = useState(1);
   const deviceOptions = [1, 2, 3, 4];
 
