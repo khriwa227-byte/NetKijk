@@ -125,7 +125,7 @@ export const Reviews: React.FC = () => {
     <section className="py-32 px-6">
       <div className="max-w-2xl mx-auto" ref={sectionRef}>
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-block px-4 py-1.5 glass-card rounded-full text-xs font-bold uppercase tracking-widest">
+          <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
             23000+ tevreden klanten
           </div>
           <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white">

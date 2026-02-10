@@ -2441,13 +2441,13 @@ export const Channels: React.FC = () => {
                 placeholder="Zoek kanalen..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                className="w-full pl-12 pr-4 py-3 bg-black/40 border border-amber-900/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-white placeholder-white/40"
               />
             </div>
             <select
               value={selectedCategory || ''}
               onChange={(e) => setSelectedCategory(e.target.value || null)}
-              className="px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all cursor-pointer min-w-[200px]"
+              className="px-4 py-3 bg-black/40 border border-amber-900/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all cursor-pointer min-w-[200px] text-white"
             >
               <option value="">Alle categorieën ({CHANNEL_CATEGORIES.length})</option>
               <optgroup label="📺 Categorieën">
@@ -2498,8 +2498,8 @@ export const Channels: React.FC = () => {
                     onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                       selectedCategory === cat.name
-                        ? 'bg-black text-white'
-                        : 'bg-white/50 text-gray-700 hover:bg-white/80'
+                        ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black'
+                        : 'bg-amber-500/10 border border-amber-500/25 text-amber-400 hover:bg-amber-500/20'
                     }`}
                   >
                     {cat.icon} {cat.name}
@@ -2513,20 +2513,20 @@ export const Channels: React.FC = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-black text-black">65.000+</div>
-            <div className="text-sm text-gray-600 font-medium">Kanalen</div>
+            <div className="text-3xl font-black text-amber-400">65.000+</div>
+            <div className="text-sm text-white/50 font-medium">Kanalen</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-black text-black">70+</div>
-            <div className="text-sm text-gray-600 font-medium">Landen</div>
+            <div className="text-3xl font-black text-amber-400">70+</div>
+            <div className="text-sm text-white/50 font-medium">Landen</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-black text-black">4K</div>
-            <div className="text-sm text-gray-600 font-medium">Ultra HD</div>
+            <div className="text-3xl font-black text-amber-400">4K</div>
+            <div className="text-sm text-white/50 font-medium">Ultra HD</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-black text-black">99.9%</div>
-            <div className="text-sm text-gray-600 font-medium">Uptime</div>
+            <div className="text-3xl font-black text-amber-400">99.9%</div>
+            <div className="text-sm text-white/50 font-medium">Uptime</div>
           </div>
         </div>
 
@@ -2541,19 +2541,19 @@ export const Channels: React.FC = () => {
               <div key={category.name} className="glass-card rounded-2xl overflow-hidden">
                 <button
                   onClick={() => toggleCategory(category.name)}
-                  className="w-full p-4 lg:p-6 flex items-center gap-2 sm:gap-3 hover:bg-white/20 transition-colors text-left"
+                  className="w-full p-4 lg:p-6 flex items-center gap-2 sm:gap-3 hover:bg-amber-500/10 transition-colors text-left"
                 >
                   <span className="text-2xl sm:text-3xl flex-shrink-0">{category.icon}</span>
-                  <h2 className="text-base sm:text-xl lg:text-2xl font-extrabold text-black tracking-tight truncate">
+                  <h2 className="text-base sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight truncate">
                     {category.name}
                   </h2>
                   <span className="ml-auto flex items-center gap-1 sm:gap-3 flex-shrink-0">
-                    <span className="bg-black text-white text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
+                    <span className="bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
                       {channelsToShow.length}
                       <span className="hidden sm:inline"> kanalen</span>
                     </span>
                     <svg
-                      className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-600 transition-transform duration-300 flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
+                      className={`w-5 h-5 sm:w-6 sm:h-6 text-white/40 transition-transform duration-300 flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -2569,10 +2569,10 @@ export const Channels: React.FC = () => {
                       {channelsToShow.map((channel, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2 px-3 py-2 bg-white/50 rounded-lg hover:bg-white/80 transition-colors"
+                          className="flex items-center gap-2 px-3 py-2 bg-white/5 rounded-lg hover:bg-amber-500/10 transition-colors border border-white/5"
                         >
-                          <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></div>
-                          <span className="text-sm font-medium text-gray-800 truncate">{channel}</span>
+                          <div className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0"></div>
+                          <span className="text-sm font-medium text-white/80 truncate">{channel}</span>
                         </div>
                       ))}
                     </div>
@@ -2589,7 +2589,7 @@ export const Channels: React.FC = () => {
             Klaar om te beginnen?
           </h3>
           <p className="text-white/70 mb-6 max-w-xl mx-auto">
-            Krijg toegang tot al deze kanalen en meer. Start vandaag nog met PrimeKopenTV.
+            Krijg toegang tot al deze kanalen en meer. Start vandaag nog met Pandoraiptv.
           </p>
           <a
             href="#pricing"

@@ -4,7 +4,7 @@ import React from 'react';
 
 const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; delay: string }> = ({ icon, children, delay }) => (
   <div
-    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-white/15 backdrop-blur-md rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.15)] border border-white/20 hover:bg-white/25 hover:scale-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-all duration-300 animate-[popIn_0.5s_ease-out_both]"
+    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-500/10 backdrop-blur-md rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] border border-amber-500/20 hover:bg-amber-500/20 hover:scale-105 hover:shadow-[0_8px_24px_rgba(212,175,55,0.15)] transition-all duration-300 animate-[popIn_0.5s_ease-out_both]"
     style={{ animationDelay: delay }}
   >
     <span className="text-lg sm:text-xl text-white flex items-center">{icon}</span>
@@ -32,13 +32,13 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:w-auto sm:justify-start">
             <a
               href="#pricing"
-              className="w-full sm:w-auto px-10 py-5 bg-white text-black text-lg font-black rounded-full hover:scale-[1.02] transition-transform shadow-2xl text-center"
+              className="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-lg font-black rounded-full hover:scale-[1.02] transition-transform shadow-2xl shadow-amber-500/20 text-center"
             >
               Bekijk prijzen
             </a>
             <a
               href="#pricing"
-              className="w-full sm:w-auto px-10 py-5 border-2 border-white/30 backdrop-blur-md text-white text-lg font-bold rounded-full hover:bg-white/10 flex items-center justify-center gap-2 transition-all"
+              className="w-full sm:w-auto px-10 py-5 border-2 border-amber-500/30 backdrop-blur-md text-white text-lg font-bold rounded-full hover:bg-amber-500/10 flex items-center justify-center gap-2 transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
               Begin nu
@@ -58,21 +58,21 @@ export const Hero: React.FC = () => {
             <div className="space-y-8 w-full flex flex-col items-center">
               <div className="flex justify-between items-center w-full">
                 <div className="w-12 h-12 opacity-0"></div> {/* Spacer for symmetry */}
-                <div className="bg-pink-500 px-4 py-2 rounded-full text-white text-xs font-bold uppercase tracking-widest shadow-lg shadow-pink-500/50">
+                <div className="bg-gradient-to-r from-amber-500 to-yellow-600 px-4 py-2 rounded-full text-black text-xs font-bold uppercase tracking-widest shadow-lg shadow-amber-500/50">
                   Start Vandaag
                 </div>
-                <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rotate-45"></div>
+                <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-amber-400 rotate-45"></div>
                 </div>
               </div>
               <div className="space-y-2">
                 <h3 className="text-5xl font-black text-white leading-tight">Doe mee</h3>
-                <h3 className="text-5xl font-black text-white leading-tight underline decoration-pink-500 decoration-4 underline-offset-8">PrimeKopenTV</h3>
+                <h3 className="text-5xl font-black text-amber-400 leading-tight underline decoration-amber-500 decoration-4 underline-offset-8">PandoraIPTV</h3>
               </div>
               <p className="text-white/70 text-lg font-medium">Eén abonnement voor alles.</p>
               <a 
                 href="#pricing" 
-                className="w-full py-5 bg-white text-black font-black rounded-2xl text-xl hover:bg-gray-100 transition-colors block text-center shadow-xl"
+                className="w-full py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-2xl text-xl hover:from-amber-500 hover:to-yellow-600 transition-colors block text-center shadow-xl shadow-amber-500/20"
               >
                 Bekijk prijzen
               </a>
@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
               className="mt-8 border-t border-white/10 pt-6 w-full flex justify-between items-center text-white hover:opacity-80 transition-opacity"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-purple-500"></div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-600"></div>
                 <div className="text-left">
                   <div className="text-sm font-bold">WhatsApp Support</div>
                   <div className="text-xs text-white/50">Bereikbaar 24/7</div>
@@ -94,8 +94,8 @@ export const Hero: React.FC = () => {
             </a>
           </div>
           
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-500 rounded-full -z-10 blur-3xl opacity-30"></div>
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-500 rounded-full -z-10 blur-3xl opacity-30"></div>
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-500 rounded-full -z-10 blur-3xl opacity-20"></div>
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-600 rounded-full -z-10 blur-3xl opacity-20"></div>
         </div>
       </div>
 

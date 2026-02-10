@@ -4,7 +4,7 @@ import { SERVICES, TOP_FILMS, CHANNEL_LOGOS, TOP_TVSHOWS_NL, TOP_TVSHOWS_INTL } 
 
 const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, posterUrl }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-white/10 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-pink-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border border-white/20">
+    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-white/10 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-amber-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border border-white/20">
       <img 
         src={posterUrl} 
         alt={title} 
@@ -44,7 +44,7 @@ const SPORTS = [
 
 const SportCard: React.FC<{ name: string; subtitle: string; icon: string; image: string }> = ({ name, subtitle, icon, image }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500 transform group-hover:-translate-y-2 border border-white/20 relative">
+    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-amber-500/20 transition-all duration-500 transform group-hover:-translate-y-2 border border-white/20 relative">
       <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
@@ -63,7 +63,7 @@ export const FilmsAndShows: React.FC = () => {
         {/* Channel Marquee */}
         <div className="space-y-6 mb-20">
            <div className="px-2 text-center lg:text-left">
-              <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Live TV</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Live TV</div>
               <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Al je favoriete zenders</h3>
            </div>
            <div className="marquee-container -mx-6 overflow-hidden">
@@ -83,7 +83,7 @@ export const FilmsAndShows: React.FC = () => {
         {/* Sports Marquee Section */}
         <div className="space-y-8 mb-20">
           <div className="text-center px-2">
-            <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Van Eredivisie tot Formule 1</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Van Eredivisie tot Formule 1</div>
             <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Alle Sporten Live in 4K</h3>
           </div>
 
@@ -105,7 +105,7 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Nu Trending</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Nu Trending</div>
               <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top Films in Nederland</h3>
             </div>
             <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
@@ -131,7 +131,7 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Nederlandse Series</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Nederlandse Series</div>
               <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top TV Shows in Nederland</h3>
             </div>
             <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
@@ -157,7 +157,7 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Internationaal Trending</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Internationaal Trending</div>
               <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top Internationale Series</h3>
             </div>
             <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">

@@ -61,7 +61,7 @@ export const Pricing: React.FC = () => {
     const pricing = getDevicePrice(plan);
     const duration = plan.description.replace(' TOEGANG', '').toLowerCase();
     const deviceText = selectedDevices === 1 ? '1 apparaat' : `${selectedDevices} apparaten`;
-    const message = `Hallo, ik wil graag het ${plan.name}-pakket van PrimeKopenTV aanschaffen voor ${duration} voor ${deviceText} (${pricing.price}).`;
+    const message = `Hallo, ik wil graag het ${plan.name}-pakket van Pandoraiptv aanschaffen voor ${duration} voor ${deviceText} (${pricing.price}).`;
     return `https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
   };
 
@@ -69,7 +69,7 @@ export const Pricing: React.FC = () => {
     <section id="pricing" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-6">
-          <div className="inline-block px-4 py-1.5 glass-card rounded-full text-xs font-bold uppercase tracking-widest">
+          <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
             PRIJZEN
           </div>
           <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-white">
@@ -79,9 +79,9 @@ export const Pricing: React.FC = () => {
 
         {/* Countdown Timer */}
         <div className="max-w-2xl mx-auto mb-12">
-          <div className="glass-card rounded-3xl p-8 text-center shadow-2xl border-2 border-purple-500">
+          <div className="glass-card rounded-3xl p-8 text-center shadow-2xl border-2 border-amber-500/50">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
               <p className="text-sm font-black uppercase tracking-widest text-white">
                 Beperkte aanbieding eindigt om middernacht
               </p>
@@ -130,8 +130,8 @@ export const Pricing: React.FC = () => {
                 onClick={() => setSelectedDevices(devices)}
                 className={`flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold text-sm transition-all duration-300 ${
                   selectedDevices === devices
-                    ? 'bg-black text-white shadow-lg'
-                    : 'text-black/70 hover:text-black hover:bg-white/50'
+                    ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black shadow-lg shadow-amber-500/20'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <DeviceIcon />
@@ -145,44 +145,44 @@ export const Pricing: React.FC = () => {
           {PRICING_PLANS.map((plan, idx) => {
             const currentPricing = getDevicePrice(plan);
             return (
-              <div key={idx} className={`glass-card rounded-[48px] overflow-hidden shadow-2xl relative flex flex-col group hover:scale-[1.02] transition-all duration-500 border-none ${idx === 0 ? 'ring-4 ring-purple-500/50' : ''}`}>
+              <div key={idx} className={`glass-card rounded-[48px] overflow-hidden shadow-2xl relative flex flex-col group hover:scale-[1.02] transition-all duration-500 ${idx === 0 ? 'ring-2 ring-amber-500/50 border-amber-500/30' : 'border-amber-900/20'}`}>
                 {idx === 0 && (
-                  <div className="absolute top-6 right-8 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-2 shadow-lg shadow-purple-500/30">
+                  <div className="absolute top-6 right-8 bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-2 shadow-lg shadow-amber-500/30">
                     <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                     Meest Gekozen
                   </div>
                 )}
                 {plan.savings && (
-                  <div className="absolute -right-1 top-[13%] bg-white text-black px-4 py-1.5 rounded-l-full text-xs font-black uppercase tracking-widest shadow-xl">
+                  <div className="absolute -right-1 top-[13%] bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-4 py-1.5 rounded-l-full text-xs font-black uppercase tracking-widest shadow-xl">
                     {plan.savings}
                   </div>
                 )}
-                <div className={`${idx === 0 ? 'bg-black/90' : 'bg-transparent'} p-10 flex-1 flex flex-col`}>
+                <div className={`${idx === 0 ? 'bg-black/80' : 'bg-transparent'} p-10 flex-1 flex flex-col`}>
                   <div className="mb-8">
-                    <p className={`text-xs font-black uppercase tracking-widest mb-2 ${idx === 0 ? 'text-white/60' : 'text-black/50'}`}>
+                    <p className={`text-xs font-black uppercase tracking-widest mb-2 ${idx === 0 ? 'text-amber-400/80' : 'text-white/50'}`}>
                       {plan.name}
                     </p>
-                    <h3 className={`text-2xl lg:text-3xl font-black tracking-tighter ${idx === 0 ? 'text-white' : 'text-black'}`}>{plan.description}</h3>
+                    <h3 className={`text-2xl lg:text-3xl font-black tracking-tighter ${idx === 0 ? 'text-white' : 'text-white'}`}>{plan.description}</h3>
                   </div>
 
                   <div className="mb-10">
                     <div className="flex items-baseline gap-1">
-                      <span className={`text-6xl font-black tracking-tighter leading-none transition-all duration-300 ${idx === 0 ? 'text-white' : 'text-black'}`}>{currentPricing.price}</span>
+                      <span className={`text-6xl font-black tracking-tighter leading-none transition-all duration-300 ${idx === 0 ? 'text-amber-400' : 'text-white'}`}>{currentPricing.price}</span>
                     </div>
-                    <div className={`text-lg mt-2 font-bold ${idx === 0 ? 'text-white/60' : 'text-black/50'}`}>
+                    <div className={`text-lg mt-2 font-bold ${idx === 0 ? 'text-white/60' : 'text-white/50'}`}>
                       {currentPricing.monthlyPrice} / mnd
                     </div>
-                    <div className={`text-sm mt-2 font-medium flex items-center gap-2 ${idx === 0 ? 'text-white/40' : 'text-black/40'}`}>
+                    <div className={`text-sm mt-2 font-medium flex items-center gap-2 ${idx === 0 ? 'text-white/40' : 'text-white/40'}`}>
                       <DeviceIcon />
                       {selectedDevices} {selectedDevices === 1 ? 'apparaat' : 'apparaten'} inbegrepen
                     </div>
                   </div>
 
                   <div className="space-y-4 mb-10 flex-1">
-                    <div className={`text-xs font-black uppercase tracking-widest mb-6 ${idx === 0 ? 'text-white/40' : 'text-black/40'}`}>Wat is inbegrepen</div>
+                    <div className={`text-xs font-black uppercase tracking-widest mb-6 ${idx === 0 ? 'text-amber-500/60' : 'text-white/40'}`}>Wat is inbegrepen</div>
                     {plan.features.map((feature, i) => (
-                      <div key={i} className={`flex items-center gap-3 text-base font-bold ${idx === 0 ? 'text-white' : 'text-black'}`}>
-                        <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${idx === 0 ? 'bg-purple-500' : 'bg-black'}`}>
+                      <div key={i} className={`flex items-center gap-3 text-base font-bold ${idx === 0 ? 'text-white' : 'text-white/90'}`}>
+                        <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${idx === 0 ? 'bg-amber-500' : 'bg-amber-600/60'}`}>
                           <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                         </div>
                         {feature}
@@ -194,7 +194,7 @@ export const Pricing: React.FC = () => {
                     href={getWhatsAppUrl(plan)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl block text-center ${idx === 0 ? 'bg-purple-500 text-white hover:bg-purple-600' : 'bg-black text-white hover:bg-gray-900'} active:scale-95`}
+                    className={`w-full py-6 text-xl font-black rounded-3xl transition-all shadow-2xl block text-center ${idx === 0 ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-black hover:from-amber-500 hover:to-yellow-600 shadow-amber-500/20' : 'bg-white/10 text-white border border-amber-900/30 hover:bg-white/15'} active:scale-95`}
                   >
                     Abonneer nu
                   </a>

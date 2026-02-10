@@ -54,12 +54,12 @@ const DevicesIcon = () => (
 );
 
 const BenefitCard: React.FC<{ title: string; desc: string; icon: React.ReactNode; className?: string }> = ({ title, desc, icon, className }) => (
-  <div className={`p-8 rounded-[40px] glass-card hover:bg-white transition-all duration-500 group cursor-default ${className}`}>
-    <div className="w-16 h-16 bg-black rounded-2xl mb-8 flex items-center justify-center text-white text-3xl group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-pink-500/20">
+  <div className={`p-8 rounded-[40px] glass-card hover:bg-black/60 transition-all duration-500 group cursor-default ${className}`}>
+    <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-700 rounded-2xl mb-8 flex items-center justify-center text-black text-3xl group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-amber-500/20">
       {icon}
     </div>
-    <h3 className="text-2xl font-black mb-4 tracking-tighter">{title}</h3>
-    <p className="text-black/70 leading-relaxed font-medium">{desc}</p>
+    <h3 className="text-2xl font-black mb-4 tracking-tighter text-white">{title}</h3>
+    <p className="text-white/60 leading-relaxed font-medium">{desc}</p>
   </div>
 );
 
@@ -68,14 +68,14 @@ export const Benefits: React.FC = () => {
     <section id="benefits" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-20 space-y-6">
-          <div className="inline-block px-4 py-1.5 glass-card rounded-full text-xs font-bold uppercase tracking-widest">
+          <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
             Lidmaatschap voordelen
           </div>
           <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-white">
             Het is <span className="text-italics underline decoration-white/20 decoration-2 underline-offset-[12px]">"je gaat nooit meer terug"</span> beter
           </h2>
           <p className="text-xl text-white/80 font-medium">
-            PrimeKopenTV vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs.
+            Pandoraiptv vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs.
           </p>
         </div>
 

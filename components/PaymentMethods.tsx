@@ -65,7 +65,7 @@ export const PaymentMethods: React.FC = () => {
   return (
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-block px-4 py-1.5 glass-card rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400 mb-6">
           Betaalmethoden
         </div>
         <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white mb-12">
@@ -75,12 +75,12 @@ export const PaymentMethods: React.FC = () => {
           {PAYMENT_METHODS.map((method) => (
             <div
               key={method.name}
-              className="glass-card rounded-[28px] py-6 flex flex-col items-center gap-4 hover:bg-white transition-all duration-500 group cursor-default aspect-square max-h-[160px]"
+              className="glass-card rounded-[28px] py-6 flex flex-col items-center gap-4 hover:bg-black/60 transition-all duration-500 group cursor-default aspect-square max-h-[160px]"
             >
-              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-pink-500/20 flex-shrink-0">
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-700 rounded-2xl flex items-center justify-center text-black group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-amber-500/20 flex-shrink-0">
                 {method.icon}
               </div>
-              <span className="text-xs font-bold tracking-tight text-center">{method.name}</span>
+              <span className="text-xs font-bold tracking-tight text-center text-white/80">{method.name}</span>
             </div>
           ))}
         </div>

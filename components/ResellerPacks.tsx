@@ -45,18 +45,18 @@ export const ResellerPacks: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-950 to-black pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">
+          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-6 text-white">
             Start Vandaag Uw Eigen Bedrijf
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/60 max-w-2xl mx-auto">
             Word een IPTV reseller met onze complete reseller pakketten
           </p>
-          <div className="inline-block mt-6 px-6 py-3 bg-blue-50 rounded-full">
-            <p className="text-lg font-semibold text-blue-600">
+          <div className="inline-block mt-6 px-6 py-3 bg-amber-500/10 border border-amber-500/30 rounded-full">
+            <p className="text-lg font-semibold text-amber-400">
               1 CREDIT = 1 MAAND
             </p>
           </div>
@@ -69,13 +69,13 @@ export const ResellerPacks: React.FC = () => {
               key={pack.credits}
               className={`relative rounded-3xl p-8 transition-all duration-300 hover:scale-105 ${
                 pack.popular
-                  ? 'bg-gradient-to-br from-black to-gray-800 text-white shadow-2xl'
-                  : 'bg-white border-2 border-gray-200 shadow-lg'
+                  ? 'bg-gradient-to-br from-amber-900/40 to-neutral-900 text-white shadow-2xl border-2 border-amber-500/30'
+                  : 'bg-neutral-900/80 border-2 border-amber-900/20 shadow-lg text-white'
               }`}
             >
               {pack.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <span className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-amber-500/30">
                     BESTE WAARDE
                   </span>
                 </div>
@@ -100,8 +100,8 @@ export const ResellerPacks: React.FC = () => {
                 onClick={() => handleSubscribe(pack.credits)}
                 className={`w-full py-4 rounded-full font-bold text-lg transition-all mb-6 ${
                   pack.popular
-                    ? 'bg-white text-black hover:bg-gray-100'
-                    : 'bg-black text-white hover:bg-gray-800'
+                    ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-black hover:from-amber-500 hover:to-yellow-600'
+                    : 'bg-white/10 text-white border border-amber-900/30 hover:bg-white/15'
                 }`}
               >
                 Abonneer Nu
@@ -112,7 +112,7 @@ export const ResellerPacks: React.FC = () => {
                   <div key={index} className="flex items-start gap-3">
                     <svg
                       className={`w-6 h-6 flex-shrink-0 mt-0.5 ${
-                        pack.popular ? 'text-green-400' : 'text-green-500'
+                        pack.popular ? 'text-amber-400' : 'text-amber-500'
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -125,7 +125,7 @@ export const ResellerPacks: React.FC = () => {
                         d="M5 13l4 4L19 7"
                       ></path>
                     </svg>
-                    <span className={`text-sm ${pack.popular ? 'text-gray-200' : 'text-gray-700'}`}>
+                    <span className={`text-sm ${pack.popular ? 'text-gray-200' : 'text-gray-400'}`}>
                       {feature}
                     </span>
                   </div>
@@ -136,42 +136,42 @@ export const ResellerPacks: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 text-center">
-          <h2 className="text-3xl font-black mb-6">Waarom Reseller Worden?</h2>
+        <div className="bg-gradient-to-br from-amber-900/20 to-neutral-900 rounded-3xl p-12 text-center border border-amber-900/20">
+          <h2 className="text-3xl font-black mb-6 text-white">Waarom Reseller Worden?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center transform rotate-3 shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center transform rotate-3 shadow-lg">
+                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Hoge Winstmarges</h3>
-              <p className="text-gray-600">Stel uw eigen prijzen in en maximaliseer uw inkomsten</p>
+              <h3 className="text-xl font-bold mb-2 text-white">Hoge Winstmarges</h3>
+              <p className="text-white/60">Stel uw eigen prijzen in en maximaliseer uw inkomsten</p>
             </div>
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center transform -rotate-3 shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center transform -rotate-3 shadow-lg">
+                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Volledige Controle</h3>
-              <p className="text-gray-600">Beheer alles vanuit uw reseller paneel</p>
+              <h3 className="text-xl font-bold mb-2 text-white">Volledige Controle</h3>
+              <p className="text-white/60">Beheer alles vanuit uw reseller paneel</p>
             </div>
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center transform rotate-2 shadow-lg">
-                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center transform rotate-2 shadow-lg">
+                <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66 10.48 12h.01L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l2.83-2.5.01.01L13.52 12h-.01l2.69-2.39c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Levenslange Toegang</h3>
-              <p className="text-gray-600">Credits en paneel verlopen nooit</p>
+              <h3 className="text-xl font-bold mb-2 text-white">Levenslange Toegang</h3>
+              <p className="text-white/60">Credits en paneel verlopen nooit</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">
+          <p className="text-white/60 mb-6">
             Vragen over onze reseller pakketten?
           </p>
           <a

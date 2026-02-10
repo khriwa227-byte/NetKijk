@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="820" height="312" viewBox="0 0 820 312">
   <defs>
     <radialGradient id="bg1" cx="0%" cy="0%" r="80%">
-      <stop offset="0%" stop-color="hsl(305,100%,70%)"/>
+      <stop offset="0%" stop-color="hsl(43,80%,45%)"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
     <radialGradient id="bg2" cx="50%" cy="0%" r="70%">
-      <stop offset="0%" stop-color="hsl(285,100%,60%)"/>
+      <stop offset="0%" stop-color="hsl(36,70%,30%)"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
     <radialGradient id="bg3" cx="100%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="hsl(270,100%,50%)"/>
+      <stop offset="0%" stop-color="hsl(38,80%,35%)"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
     <radialGradient id="bg4" cx="0%" cy="100%" r="70%">
-      <stop offset="0%" stop-color="hsl(260,100%,40%)"/>
+      <stop offset="0%" stop-color="hsl(30,50%,20%)"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
     <radialGradient id="bg5" cx="100%" cy="100%" r="70%">
-      <stop offset="0%" stop-color="hsl(190,100%,50%)" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="hsl(45,80%,45%)" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
     <linearGradient id="diamond-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.8)"/>
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8941F"/>
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="5" result="blur"/>
@@ -37,7 +37,7 @@
   </defs>
 
   <!-- Base background -->
-  <rect width="820" height="312" fill="#0002ff"/>
+  <rect width="820" height="312" fill="#080808"/>
 
   <!-- Gradient layers -->
   <rect width="820" height="312" fill="url(#bg1)"/>
@@ -63,7 +63,7 @@
   <!-- Brand name -->
   <g filter="url(#text-shadow)">
     <text x="280" y="145" font-family="'Figtree', 'Inter', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#ffffff" letter-spacing="-2">
-      PrimeKopenTV
+      Pandoraiptv
     </text>
   </g>
 
@@ -87,7 +87,7 @@
     <text x="562" y="228" text-anchor="middle" fill="rgba(255,255,255,0.9)" letter-spacing="1">SPORT LIVE</text>
 
     <!-- Pill 4 -->
-    <rect x="622" y="210" width="120" height="28" rx="14" fill="rgba(236,72,153,0.5)" stroke="rgba(236,72,153,0.6)" stroke-width="1"/>
+    <rect x="622" y="210" width="120" height="28" rx="14" fill="rgba(212,175,55,0.5)" stroke="rgba(212,175,55,0.6)" stroke-width="1"/>
     <text x="682" y="228" text-anchor="middle" fill="#ffffff" letter-spacing="1">FILMS &amp; SERIES</text>
   </g>
 </svg>
