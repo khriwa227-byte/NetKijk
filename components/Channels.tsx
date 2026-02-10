@@ -2571,7 +2571,7 @@ export const Channels: React.FC = () => {
                           key={idx}
                           className="flex items-center gap-2 px-3 py-2 bg-white/5 rounded-lg hover:bg-amber-500/10 transition-colors border border-white/5"
                         >
-                          <div className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0"></div>
+                          <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></div>
                           <span className="text-sm font-medium text-white/80 truncate">{channel}</span>
                         </div>
                       ))}
