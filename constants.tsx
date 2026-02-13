@@ -1,5 +1,5 @@
 
-import { FAQItem, PricingPlan } from './types';
+import { FAQItem, PricingPlan, SubscriptionTier, PeriodPlan } from './types';
 
 export const FAQS: FAQItem[] = [
   {
@@ -40,81 +40,73 @@ export const FAQS: FAQItem[] = [
   }
 ];
 
-export interface DevicePricing {
-  devices: number;
-  price: string;
-  monthlyPrice: string;
-}
+export const BASIS_FEATURES: string[] = [
+  "SD/HD/FULL HD/UHD/4K Kwaliteit",
+  "+80.000 Kanalen + Netflix",
+  "RTL, NPO, ZIGGO, SBS, ESPN",
+  "+140.000 Films & Series",
+  "Wekelijkse Updates",
+  "24/7 Support NL & BE",
+  "100% Anoniem",
+  "AntiFreeze Technologie",
+  "Alle Apparaten",
+  "VPN Inbegrepen",
+  "Exclusieve NL & BE Content",
+  "Netflix, Amazon, HBO, Apple TV, Hulu"
+];
 
-export interface ExtendedPricingPlan extends PricingPlan {
-  monthlyPrice: string;
-  savings?: string;
-  devicePricing: DevicePricing[];
-}
+export const PREMIUM_FEATURES: string[] = [
+  "SD/HD/FULL HD/4K/8K/HDR-VR",
+  "+80.000 Kanalen + Netflix",
+  "RTL, NPO, ZIGGO, SBS, ESPN, VTM",
+  "+200.000 Films & Series",
+  "Dagelijkse Updates",
+  "Alle Sport PPV Events",
+  "VIP 24/7 Support",
+  "Enterprise Anti-Freeze PRO",
+  "Persoonlijke VIP Manager",
+  "Alle Apparaten",
+  "VPN Inbegrepen",
+  "Exclusieve VIP Content",
+  "Netflix, Amazon, HBO, Apple TV, Hulu"
+];
 
-export const PRICING_PLANS: ExtendedPricingPlan[] = [
+export const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
+  { name: "Basis", features: BASIS_FEATURES },
+  { name: "Premium VIP", features: PREMIUM_FEATURES }
+];
+
+export const PERIOD_PLANS: PeriodPlan[] = [
   {
-    name: "Prime",
-    price: "€99,99",
-    monthlyPrice: "€8,33",
-    savings: "Bespaar 50%",
-    description: "12 MAANDEN TOEGANG",
+    id: "3",
+    label: "3 Maanden",
     devicePricing: [
-      { devices: 1, price: "€69,99", monthlyPrice: "€5,83" },
-      { devices: 2, price: "€99,99", monthlyPrice: "€8,33" },
-      { devices: 3, price: "€149,99", monthlyPrice: "€12,50" },
-      { devices: 4, price: "€179,99", monthlyPrice: "€15,00" }
-    ],
-    features: [
-      "65.000+ kanalen",
-      "175.000+ films & series",
-      "HD & 4K streaming",
-      "Alle apparaten",
-      "15 dagen geld-terug",
-      "WhatsApp support",
-      "Beste prijs/kwaliteit"
+      { devices: 1, basisPrice: "€24,99", premiumPrice: "€34,99" },
+      { devices: 2, basisPrice: "€34,99", premiumPrice: "€49,99" },
+      { devices: 3, basisPrice: "€44,99", premiumPrice: "€69,99" },
+      { devices: 4, basisPrice: "€57,99", premiumPrice: "€89,99" }
     ]
   },
   {
-    name: "Popular",
-    price: "€59,99",
-    monthlyPrice: "€10,00",
-    savings: "Bespaar 35%",
-    description: "6 MAANDEN TOEGANG",
+    id: "6",
+    label: "6 Maanden",
     devicePricing: [
-      { devices: 1, price: "€44,99", monthlyPrice: "€7,50" },
-      { devices: 2, price: "€59,99", monthlyPrice: "€10,00" },
-      { devices: 3, price: "€89,99", monthlyPrice: "€15,00" },
-      { devices: 4, price: "€114,99", monthlyPrice: "€19,17" }
-    ],
-    features: [
-      "65.000+ kanalen",
-      "175.000+ films & series",
-      "HD & 4K streaming",
-      "Alle apparaten",
-      "15 dagen geld-terug",
-      "WhatsApp support",
-      "Pauzeer of annuleer"
+      { devices: 1, basisPrice: "€34,99", premiumPrice: "€44,99" },
+      { devices: 2, basisPrice: "€49,99", premiumPrice: "€79,99" },
+      { devices: 3, basisPrice: "€69,99", premiumPrice: "€99,99" },
+      { devices: 4, basisPrice: "€89,99", premiumPrice: "€139,99" }
     ]
   },
   {
-    name: "Starter",
-    price: "€44,99",
-    monthlyPrice: "€15,00",
-    description: "3 MAANDEN TOEGANG",
+    id: "12+3",
+    label: "12+3 Maanden",
+    subtitle: "Beste Deal",
+    isBestDeal: true,
     devicePricing: [
-      { devices: 1, price: "€34,99", monthlyPrice: "€11,67" },
-      { devices: 2, price: "€44,99", monthlyPrice: "€15,00" },
-      { devices: 3, price: "€64,99", monthlyPrice: "€21,67" },
-      { devices: 4, price: "€79,99", monthlyPrice: "€26,67" }
-    ],
-    features: [
-      "65.000+ kanalen",
-      "175.000+ films & series",
-      "HD & 4K streaming",
-      "Alle apparaten",
-      "15 dagen geld-terug",
-      "WhatsApp support"
+      { devices: 1, basisPrice: "€49,99", premiumPrice: "€69,99" },
+      { devices: 2, basisPrice: "€79,99", premiumPrice: "€109,99" },
+      { devices: 3, basisPrice: "€99,99", premiumPrice: "€149,99" },
+      { devices: 4, basisPrice: "€129,99", premiumPrice: "€189,99" }
     ]
   }
 ];

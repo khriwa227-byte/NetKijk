@@ -20,3 +20,22 @@ export interface PricingPlan {
   features: string[];
   description: string;
 }
+
+export interface SubscriptionTier {
+  name: string;
+  features: string[];
+}
+
+export interface DevicePricingTier {
+  devices: number;
+  basisPrice: string;
+  premiumPrice: string;
+}
+
+export interface PeriodPlan {
+  id: string;
+  label: string;
+  subtitle?: string;
+  devicePricing: DevicePricingTier[];
+  isBestDeal?: boolean;
+}

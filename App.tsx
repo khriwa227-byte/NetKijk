@@ -122,6 +122,48 @@ const App: React.FC = () => {
       )}
 
       <Footer />
+
+      {/* Sticky CTA Button */}
+      {currentPage === 'home' && (
+        <a
+          href="#pricing"
+          style={{
+            position: 'fixed',
+            bottom: '24px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '20px 40px',
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+            border: '2px solid rgba(168, 85, 247, 0.6)',
+            borderRadius: '9999px',
+            color: 'white',
+            fontWeight: 900,
+            fontSize: '15px',
+            textDecoration: 'none',
+            boxShadow: '0 0 30px rgba(168, 85, 247, 0.3), 0 4px 20px rgba(0,0,0,0.5)',
+            whiteSpace: 'nowrap' as const,
+          }}
+        >
+          <span
+            style={{
+              width: '8px',
+              height: '8px',
+              backgroundColor: '#22c55e',
+              borderRadius: '50%',
+              animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)',
+            }}
+          />
+          Abonneer Nu
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      )}
     </div>
   );
 };
