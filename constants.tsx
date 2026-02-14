@@ -82,8 +82,8 @@ export const PERIOD_PLANS: PeriodPlan[] = [
     label: "3 Maanden",
     devicePricing: [
       { devices: 1, basisPrice: "€24,99", premiumPrice: "€34,99" },
-      { devices: 2, basisPrice: "€34,99", premiumPrice: "€49,99" },
-      { devices: 3, basisPrice: "€44,99", premiumPrice: "€69,99" },
+      { devices: 2, basisPrice: "€39,99", premiumPrice: "€49,99" },
+      { devices: 3, basisPrice: "€49,99", premiumPrice: "€69,99" },
       { devices: 4, basisPrice: "€57,99", premiumPrice: "€89,99" }
     ]
   },
