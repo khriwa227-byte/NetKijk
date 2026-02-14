@@ -196,7 +196,7 @@ export const Pricing: React.FC = () => {
 
             <div className={`p-10 flex-1 flex flex-col ${isBestDeal ? 'pt-20' : 'pt-16'}`}>
               <div className="mb-8">
-                <p className="text-xs font-black uppercase tracking-widest mb-2 text-blue-400/80">
+                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-blue-400/80">
                   {currentPlan.label}
                 </p>
                 <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Basis Pakket</h3>
@@ -271,7 +271,7 @@ export const Pricing: React.FC = () => {
 
             <div className={`p-10 flex-1 flex flex-col ${isBestDeal ? 'pt-20' : 'pt-16'}`}>
               <div className="mb-8">
-                <p className="text-xs font-black uppercase tracking-widest mb-2 text-amber-400/80">
+                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-amber-400/80">
                   {currentPlan.label}
                 </p>
                 <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Premium VIP Pakket</h3>
