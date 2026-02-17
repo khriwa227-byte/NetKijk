@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 
 interface HeaderProps {
   isScrolled: boolean;
+  hasBanner?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
+export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -21,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`}>
+      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`} style={{ top: hasBanner ? '40px' : '0px' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between items-center">
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">

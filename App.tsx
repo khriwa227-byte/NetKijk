@@ -13,10 +13,12 @@ import { AlgemeneVoorwaarden } from './components/AlgemeneVoorwaarden';
 import { Privacybeleid } from './components/Privacybeleid';
 import { Channels } from './components/Channels';
 import { ResellerPacks } from './components/ResellerPacks';
+import { AnnouncementBanner } from './components/AnnouncementBanner';
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState<string>('home');
+  const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -74,7 +76,8 @@ const App: React.FC = () => {
       <div className="grid-line grid-line-left"></div>
       <div className="grid-line grid-line-right"></div>
 
-      <Header isScrolled={scrollY > 50} />
+      {showBanner && <AnnouncementBanner onClose={() => setShowBanner(false)} />}
+      <Header isScrolled={scrollY > 50} hasBanner={showBanner} />
 
       {currentPage === 'algemene-voorwaarden' ? (
         <main>

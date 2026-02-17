@@ -20,6 +20,20 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto sm:px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="flex flex-col items-center sm:items-start gap-10 sm:gap-12 w-[88%] sm:w-full mx-auto sm:mx-0">
 
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border border-amber-500/40 backdrop-blur-sm animate-[popIn_0.5s_ease-out_both]">
+            <div className="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
+              <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <path d="M20 12v10H4V12"/>
+                <path d="M2 7h20v5H2z"/>
+                <path d="M12 22V7"/>
+                <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
+                <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+              </svg>
+            </div>
+            <span className="text-lg sm:text-xl font-extrabold text-white">Bestel nu en ontvang</span>
+            <span className="text-lg sm:text-xl font-black text-amber-400 uppercase tracking-wide">3 maanden gratis</span>
+          </div>
+
           <h1 className="text-[clamp(3rem,13vw,6rem)] lg:text-8xl font-extrabold leading-[1.1] tracking-tighter text-white drop-shadow-sm text-center sm:text-left w-full">
             <span className="sm:hidden">Premium IPTV<br />voor <span className="text-italics">iedereen</span></span>
             <span className="hidden sm:inline">Premium IPTV voor <span className="text-italics">iedereen</span></span>
@@ -41,7 +55,7 @@ export const Hero: React.FC = () => {
               className="w-full sm:w-auto px-10 py-5 border-2 border-amber-500/30 backdrop-blur-md text-white text-lg font-bold rounded-full hover:bg-amber-500/10 flex items-center justify-center gap-2 transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-              Begin nu
+              Claim mijn 3 maanden bonus
             </a>
           </div>
 
