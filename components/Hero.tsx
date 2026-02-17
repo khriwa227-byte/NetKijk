@@ -52,10 +52,18 @@ export const Hero: React.FC = () => {
             </a>
             <a
               href="#pricing"
-              className="w-full sm:w-auto px-10 py-5 border-2 border-amber-500/30 backdrop-blur-md text-white text-lg font-bold rounded-full hover:bg-amber-500/10 flex items-center justify-center gap-2 transition-all"
+              className="bonus-btn group relative w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border-2 border-amber-500/50 backdrop-blur-md text-white text-lg font-black rounded-full hover:scale-[1.03] flex items-center justify-center gap-3 transition-transform duration-300 overflow-hidden"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-              Claim mijn 3 maanden bonus
+              <span className="shimmer-bar absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></span>
+              <svg className="w-5 h-5 text-amber-400 relative" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <path d="M20 12v10H4V12"/>
+                <path d="M2 7h20v5H2z"/>
+                <path d="M12 22V7"/>
+                <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
+                <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+              </svg>
+              <span className="relative">Claim mijn <span className="text-amber-400">3 maanden</span> bonus</span>
+              <svg className="bounce-arrow w-5 h-5 relative" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
           </div>
 
@@ -67,12 +75,12 @@ export const Hero: React.FC = () => {
 
         </div>
 
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="relative hidden lg:flex justify-center lg:justify-end">
           <div className="glass-card-dark p-10 rounded-[40px] shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 w-full max-w-[440px] flex flex-col items-center text-center">
             <div className="space-y-8 w-full flex flex-col items-center">
               <div className="flex justify-between items-center w-full">
                 <div className="w-12 h-12 opacity-0"></div> {/* Spacer for symmetry */}
-                <div className="bg-gradient-to-r from-amber-500 to-yellow-600 px-4 py-2 rounded-full text-black text-xs font-bold uppercase tracking-widest shadow-lg shadow-amber-500/50">
+                <div className="hidden sm:block bg-gradient-to-r from-amber-500 to-yellow-600 px-4 py-2 rounded-full text-black text-xs font-bold uppercase tracking-widest shadow-lg shadow-amber-500/50">
                   Start Vandaag
                 </div>
                 <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
