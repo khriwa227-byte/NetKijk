@@ -19,7 +19,7 @@ const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, po
 
 const ChannelLogo: React.FC<{ name: string; logo: string }> = ({ name, logo }) => (
   <div
-    className="flex-shrink-0 px-6 py-4 glass-card rounded-2xl flex items-center justify-center h-20 min-w-[160px] opacity-80 hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl group overflow-hidden border border-white/10 hover:border-white/30 bg-white/5 hover:bg-white/10"
+    className="flex-shrink-0 px-6 py-4 rounded-2xl flex items-center justify-center h-20 min-w-[160px] opacity-80 hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl group overflow-hidden border border-white/20 hover:border-white/40 bg-white/60"
   >
     <img
       src={logo}

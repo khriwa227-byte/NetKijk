@@ -43,7 +43,7 @@ export const FAQS: FAQItem[] = [
 export const BASIS_FEATURES: string[] = [
   "SD/HD/FULL HD/UHD/4K Kwaliteit",
   "+80.000 Kanalen + Netflix",
-  "RTL, NPO, ZIGGO, SBS, ESPN",
+  "RTL, NPO, ZIGGO, SBS, ESPN, Viaplay",
   "+140.000 Films & Series",
   "Wekelijkse Updates",
   "24/7 Support NL & BE",
@@ -58,7 +58,7 @@ export const BASIS_FEATURES: string[] = [
 export const PREMIUM_FEATURES: string[] = [
   "SD/HD/FULL HD/4K/8K/HDR-VR",
   "+80.000 Kanalen + Netflix",
-  "RTL, NPO, ZIGGO, SBS, ESPN, VTM",
+  "RTL, NPO, ZIGGO, SBS, ESPN, Viaplay, VTM",
   "+200.000 Films & Series",
   "Dagelijkse Updates",
   "Alle Sport PPV Events",
@@ -103,10 +103,10 @@ export const PERIOD_PLANS: PeriodPlan[] = [
     subtitle: "Beste Deal",
     isBestDeal: true,
     devicePricing: [
-      { devices: 1, basisPrice: "€49,99", premiumPrice: "€69,99" },
+      { devices: 1, basisPrice: "€69,99", premiumPrice: "€78,00" },
       { devices: 2, basisPrice: "€79,99", premiumPrice: "€109,99" },
-      { devices: 3, basisPrice: "€99,99", premiumPrice: "€149,99" },
-      { devices: 4, basisPrice: "€129,99", premiumPrice: "€189,99" }
+      { devices: 3, basisPrice: "€139,99", premiumPrice: "€179,99" },
+      { devices: 4, basisPrice: "€159,99", premiumPrice: "€199,99" }
     ]
   }
 ];
