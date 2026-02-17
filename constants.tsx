@@ -104,9 +104,9 @@ export const PERIOD_PLANS: PeriodPlan[] = [
     isBestDeal: true,
     devicePricing: [
       { devices: 1, basisPrice: "€69,99", premiumPrice: "€78,00" },
-      { devices: 2, basisPrice: "€79,99", premiumPrice: "€109,99" },
+      { devices: 2, basisPrice: "€99,99", premiumPrice: "€124,99" },
       { devices: 3, basisPrice: "€139,99", premiumPrice: "€179,99" },
-      { devices: 4, basisPrice: "€159,99", premiumPrice: "€199,99" }
+      { devices: 4, basisPrice: "€179,99", premiumPrice: "€199,99" }
     ]
   }
 ];
