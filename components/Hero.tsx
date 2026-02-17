@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
               </div>
               <div className="space-y-2">
                 <h3 className="text-5xl font-black text-white leading-tight">Doe mee</h3>
-                <h3 className="text-5xl font-black text-amber-400 leading-tight underline decoration-amber-500 decoration-4 underline-offset-8">PandoraIPTV</h3>
+                <h3 className="text-5xl font-black text-amber-400 leading-tight underline decoration-amber-500 decoration-4 underline-offset-8">IPTVTotaal</h3>
               </div>
               <p className="text-white/70 text-lg font-medium">Eén abonnement voor alles.</p>
               <a 

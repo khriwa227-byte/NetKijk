@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
               <div className="w-4 h-4 bg-black rotate-45"></div>
             </div>
-            <span className="text-xl font-extrabold tracking-tighter text-white">PandoraIPTV</span>
+            <span className="text-xl font-extrabold tracking-tighter text-white">IPTVTotaal</span>
           </a>
           
           {/* Desktop Navigation */}
