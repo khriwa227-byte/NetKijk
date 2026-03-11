@@ -12,6 +12,12 @@ const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; d
   </div>
 );
 
+const trackWhatsAppConversion = () => {
+  if (typeof (window as any).gtag !== 'undefined') {
+    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-17943234084/TNFFCLLWtYYcEKSMgOxC' });
+  }
+};
+
 export const Hero: React.FC = () => {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
@@ -99,10 +105,11 @@ export const Hero: React.FC = () => {
                 Bekijk prijzen
               </a>
             </div>
-            <a 
+            <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppConversion}
               className="mt-8 border-t border-white/10 pt-6 w-full flex justify-between items-center text-white hover:opacity-80 transition-opacity"
             >
               <div className="flex items-center gap-3">
