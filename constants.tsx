@@ -68,7 +68,7 @@ export const PREMIUM_FEATURES: string[] = [
   "Alle Apparaten",
   "VPN Inbegrepen",
   "Exclusieve VIP Content",
-  "Netflix, Amazon, HBO, Apple TV, Hulu"
+  "Videoland, Netflix, Amazon, HBO, Apple TV, Hulu"
 ];
 
 export const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
