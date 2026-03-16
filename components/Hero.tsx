@@ -14,7 +14,7 @@ const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; d
 
 const trackWhatsAppConversion = () => {
   if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-17943234084/TNFFCLLWtYYcEKSMgOxC' });
+    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-17931974241/kSWMCNKhuIkcEOHs0OZC' });
   }
 };
 
