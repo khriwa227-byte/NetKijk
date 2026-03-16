@@ -42,7 +42,7 @@ export const FAQS: FAQItem[] = [
 
 export const BASIS_FEATURES: string[] = [
   "SD/HD/FULL HD/UHD/4K Kwaliteit",
-  "+80.000 Kanalen + Netflix",
+  "+50.000 Kanalen + Netflix",
   "RTL, NPO, ZIGGO, SBS, ESPN, Viaplay",
   "+140.000 Films & Series",
   "Wekelijkse Updates",
@@ -72,8 +72,8 @@ export const PREMIUM_FEATURES: string[] = [
 ];
 
 export const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
-  { name: "Basis", features: BASIS_FEATURES },
-  { name: "Premium VIP", features: PREMIUM_FEATURES }
+  { name: "Premium VIP", features: PREMIUM_FEATURES },
+  { name: "Basis", features: BASIS_FEATURES }
 ];
 
 export const PERIOD_PLANS: PeriodPlan[] = [

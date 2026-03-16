@@ -175,77 +175,6 @@ export const Pricing: React.FC = () => {
 
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Basis Card */}
-          <div className={`relative rounded-[32px] overflow-hidden shadow-2xl flex flex-col group hover:scale-[1.02] transition-all duration-500 ${
-            isBestDeal ? 'ring-2 ring-purple-500/50' : ''
-          }`}
-            style={{
-              background: 'linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(6,182,212,0.10) 50%, rgba(59,130,246,0.05) 100%)',
-              border: '1px solid rgba(59,130,246,0.25)',
-            }}
-          >
-            {/* Beste Deal Banner */}
-            {isBestDeal && (
-              <div className="flex justify-center pt-4">
-                <div className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
-                  Beste Deal
-                </div>
-              </div>
-            )}
-
-            {/* Badge */}
-            <div className={`absolute ${isBestDeal ? 'top-14' : 'top-6'} left-6`}>
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
-                Basis
-              </div>
-            </div>
-
-            <div className={`p-10 flex-1 flex flex-col ${isBestDeal ? 'pt-20' : 'pt-16'}`}>
-              <div className="mb-8">
-                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-blue-400/80">
-                  {currentPlan.label}
-                </p>
-                <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Basis Pakket</h3>
-              </div>
-
-              <div className="mb-10">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-6xl font-black tracking-tighter leading-none text-blue-400 transition-all duration-300">
-                    {currentDevicePricing.basisPrice}
-                  </span>
-                </div>
-                <div className="text-sm mt-2 font-medium flex items-center gap-2 text-blue-300/60">
-                  <DeviceIcon />
-                  {selectedDevices} {selectedDevices === 1 ? 'apparaat' : 'apparaten'} inbegrepen
-                </div>
-              </div>
-
-              <div className="space-y-3 mb-10 flex-1">
-                <div className="text-xs font-black uppercase tracking-widest mb-6 text-blue-400/50">Wat is inbegrepen</div>
-                {BASIS_FEATURES.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm font-bold text-white/90">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-blue-500 to-cyan-500">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-
-              <a
-                href={getWhatsAppUrl('basis')}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={trackWhatsAppConversion}
-                className="w-full py-5 text-lg font-black rounded-2xl transition-all shadow-xl block text-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 active:scale-95"
-              >
-                Bestel Nu
-              </a>
-            </div>
-          </div>
-
           {/* Premium VIP Card */}
           <div className={`relative rounded-[32px] overflow-hidden flex flex-col group hover:scale-[1.02] transition-all duration-500 ${
             isBestDeal
@@ -321,6 +250,77 @@ export const Pricing: React.FC = () => {
                 style={{ boxShadow: '0 0 30px rgba(245,158,11,0.3)' }}
               >
                 Word VIP Nu
+              </a>
+            </div>
+          </div>
+
+          {/* Basis Card */}
+          <div className={`relative rounded-[32px] overflow-hidden shadow-2xl flex flex-col group hover:scale-[1.02] transition-all duration-500 ${
+            isBestDeal ? 'ring-2 ring-purple-500/50' : ''
+          }`}
+            style={{
+              background: 'linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(6,182,212,0.10) 50%, rgba(59,130,246,0.05) 100%)',
+              border: '1px solid rgba(59,130,246,0.25)',
+            }}
+          >
+            {/* Beste Deal Banner */}
+            {isBestDeal && (
+              <div className="flex justify-center pt-4">
+                <div className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+                  Beste Deal
+                </div>
+              </div>
+            )}
+
+            {/* Badge */}
+            <div className={`absolute ${isBestDeal ? 'top-14' : 'top-6'} left-6`}>
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
+                Basis
+              </div>
+            </div>
+
+            <div className={`p-10 flex-1 flex flex-col ${isBestDeal ? 'pt-20' : 'pt-16'}`}>
+              <div className="mb-8">
+                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-blue-400/80">
+                  {currentPlan.label}
+                </p>
+                <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Basis Pakket</h3>
+              </div>
+
+              <div className="mb-10">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-6xl font-black tracking-tighter leading-none text-blue-400 transition-all duration-300">
+                    {currentDevicePricing.basisPrice}
+                  </span>
+                </div>
+                <div className="text-sm mt-2 font-medium flex items-center gap-2 text-blue-300/60">
+                  <DeviceIcon />
+                  {selectedDevices} {selectedDevices === 1 ? 'apparaat' : 'apparaten'} inbegrepen
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-10 flex-1">
+                <div className="text-xs font-black uppercase tracking-widest mb-6 text-blue-400/50">Wat is inbegrepen</div>
+                {BASIS_FEATURES.map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3 text-sm font-bold text-white/90">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-blue-500 to-cyan-500">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    {feature}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={getWhatsAppUrl('basis')}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackWhatsAppConversion}
+                className="w-full py-5 text-lg font-black rounded-2xl transition-all shadow-xl block text-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 active:scale-95"
+              >
+                Bestel Nu
               </a>
             </div>
           </div>
