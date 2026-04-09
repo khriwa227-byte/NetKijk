@@ -39,14 +39,7 @@ const features = [
 export const ResellerPacks: React.FC = () => {
   const whatsappNumber = '447449708976';
 
-  const trackWhatsAppConversion = () => {
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'conversion', { 'send_to': 'AW-17931974241/kSWMCNKhuIkcEOHs0OZC' });
-    }
-  };
-
   const handleSubscribe = (credits: number) => {
-    trackWhatsAppConversion();
     const message = `Hallo, ik wil graag het ${credits} CREDITS reseller pakket bestellen.`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
