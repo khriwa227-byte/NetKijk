@@ -94,9 +94,10 @@ export const AlgemeneVoorwaarden: React.FC = () => {
           <section>
             <h2 className="text-2xl font-extrabold text-black tracking-tight mb-4">8. Herroepingsrecht en Restitutie</h2>
             <ol className="list-decimal pl-6 space-y-2">
-              <li>De Klant heeft het recht om binnen 14 dagen na activering van het abonnement zonder opgaaf van redenen het abonnement te herroepen.</li>
-              <li>Om gebruik te maken van het herroepingsrecht dient de Klant contact op te nemen met IPTVTotaal via WhatsApp of e-mail.</li>
-              <li>Bij herroeping binnen de gestelde termijn wordt het volledige bedrag gerestitueerd.</li>
+              <li>De Klant heeft het recht om binnen 14 dagen na activering van het abonnement het abonnement te herroepen, uitsluitend indien de dienst aantoonbaar niet werkt.</li>
+              <li>Herroeping is alleen mogelijk indien de Klant kan aantonen dat het abonnement technisch niet functioneert en IPTVTotaal het probleem niet binnen een redelijke termijn heeft kunnen oplossen.</li>
+              <li>Om gebruik te maken van het herroepingsrecht dient de Klant contact op te nemen met IPTVTotaal via WhatsApp of e-mail en het technische probleem duidelijk te omschrijven.</li>
+              <li>Bij goedgekeurde herroeping binnen de gestelde termijn wordt het volledige bedrag gerestitueerd.</li>
               <li>Na het verstrijken van de herroepingstermijn is restitutie niet meer mogelijk.</li>
             </ol>
           </section>
