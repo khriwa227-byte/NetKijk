@@ -24,7 +24,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "Krijg ik een gratis proefperiode?",
-    answer: "We bieden geen gratis proefperiodes aan. In plaats daarvan krijg je een 15-dagen geld-terug-garantie. Dit is beter omdat je volledige toegang hebt (niet beperkt) en meer tijd om alles grondig te testen.\n\nAls de service binnen deze 15 dagen stopt met werken en wij het probleem niet kunnen oplossen, krijg je je geld volledig terug — zonder vragen."
+    answer: "We bieden geen gratis proefperiodes aan. In plaats daarvan krijg je een 15-dagen geld-terug-garantie. Dit is beter omdat je volledige toegang hebt (niet beperkt) en meer tijd om alles grondig te testen.\n\nAls de service binnen deze 15 dagen stopt met werken en wij het probleem niet kunnen oplossen, krijg je je geld volledig terug."
   },
   {
     question: "Welke apparaten worden ondersteund?",

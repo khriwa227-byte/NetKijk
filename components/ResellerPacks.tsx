@@ -37,7 +37,7 @@ const features = [
 ];
 
 export const ResellerPacks: React.FC = () => {
-  const whatsappNumber = '447414662070';
+  const whatsappNumber = '447449708976';
 
   const trackWhatsAppConversion = () => {
     if (typeof (window as any).gtag !== 'undefined') {
