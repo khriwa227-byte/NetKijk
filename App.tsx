@@ -1,6 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
+import { ComingSoon } from './components/ComingSoon';
 import { Header } from './components/Header';
+
+// ← Set to true to show the Coming Soon page. Set to false to show the full site.
+const COMING_SOON = true;
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
 import { ServicesGrid, FilmsAndShows } from './components/ServicesGrid';
@@ -70,6 +74,8 @@ const App: React.FC = () => {
       revealElements.forEach(el => observer.unobserve(el));
     };
   }, [currentPage]);
+
+  if (COMING_SOON) return <ComingSoon />;
 
   return (
     <div className="relative min-h-screen">
