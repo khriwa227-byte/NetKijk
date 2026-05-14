@@ -94,14 +94,14 @@ export const ComingSoon: React.FC = () => {
       {/* Hero */}
       <section className="flex-1 flex flex-col items-center justify-center text-center px-6 py-16">
         <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-black uppercase tracking-widest text-amber-400 mb-8">
-          Binnenkort beschikbaar
+          Onze Abonnementen
         </div>
         <h1 className="text-5xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-6 max-w-4xl">
-          Premium streaming,<br />
-          <span className="text-amber-400 italic font-light">voor iedereen.</span>
+          Hier zijn onze<br />
+          <span className="text-amber-400 italic font-light">beschikbare abonnementen.</span>
         </h1>
         <p className="text-lg lg:text-xl text-white/60 max-w-xl mb-10 font-medium">
-          NetKijk lanceert binnenkort. Kies alvast je pakket en neem contact op via WhatsApp — je bent als eerste aan de beurt.
+          Kies het pakket dat bij jou past en neem contact op via WhatsApp — wij helpen je binnen 5 minuten.
         </p>
         <a
           href={WHATSAPP_BASE}
